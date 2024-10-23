@@ -64,7 +64,9 @@ function Header() {
           </ul>
         </nav>
         <div className="text-center">
-          <h1 className={`${kalam.className} text-6xl font-bold mb-4 max-sm:mt-[15vh]  font-serif`}>
+          <h1
+            className={`${kalam.className} text-6xl font-bold mb-4 max-sm:mt-[15vh]  font-serif`}
+          >
             Lagoinha Refúgio house
           </h1>
           <p className="text-xl mb-8 max-w-2xl mx-auto mt-6">
@@ -73,8 +75,7 @@ function Header() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             São 2 casas diponiveis para estadia,
             <br />
-            você pode reservar as duas
-            ou escolher qual será a sua.
+            você pode reservar as duas ou escolher qual será a sua.
           </p>
         </div>
         <div className="flex flex-row justify-center gap-4">

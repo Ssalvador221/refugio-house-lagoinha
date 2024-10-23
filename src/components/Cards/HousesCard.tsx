@@ -23,14 +23,15 @@ import { Kalam } from 'next/font/google'
 
 const kalam = Kalam({ subsets: ['latin'], weight: ['400'] })
 
-
 function HousesCard() {
   const [open, setOpen] = React.useState(false)
   const [open1, setOpen1] = React.useState(false)
 
   return (
     <section className="mb-20" id="casas">
-      <h2 className={`${kalam.className} text-4xl font-bold mb-12 text-center font-serif text-[#BC9B5D]`}>
+      <h2
+        className={`${kalam.className} text-4xl font-bold mb-12 text-center font-serif text-[#BC9B5D]`}
+      >
         Nossas Casas
       </h2>
       <div className="grid md:grid-cols-2 gap-12">
@@ -53,7 +54,9 @@ function HousesCard() {
             <CarouselNext />
           </Carousel>
           <CardHeader>
-            <CardTitle className={`${kalam.className} text-3xl font-serif text-[#BC9B5D]`}>
+            <CardTitle
+              className={`${kalam.className} text-3xl font-serif text-[#BC9B5D]`}
+            >
               Refúgio House I
             </CardTitle>
           </CardHeader>
@@ -116,7 +119,9 @@ function HousesCard() {
             <CarouselNext />
           </Carousel>
           <CardHeader>
-            <CardTitle className={`${kalam.className} text-3xl font-serif text-[#BC9B5D]`}>
+            <CardTitle
+              className={`${kalam.className} text-3xl font-serif text-[#BC9B5D]`}
+            >
               Refúgio House II
             </CardTitle>
           </CardHeader>
