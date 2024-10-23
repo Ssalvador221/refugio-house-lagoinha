@@ -1,5 +1,7 @@
 'use client'
+import Link from 'next/link'
 import React from 'react'
+import { FaWhatsapp, FaInstagram, FaAirbnb } from 'react-icons/fa'
 
 function Header() {
   return (
@@ -32,15 +34,31 @@ function Header() {
             </li>
             <li>
               <a
-                href="#"
+                href="#onde-vai-estar"
                 className="text-lg hover:text-amber-200 transition-colors"
               >
-                Sobre
+                Aonde Estará
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="#servicos"
+                className="text-lg hover:text-amber-200 transition-colors"
+              >
+                Serviços
+              </a>
+            </li>
+            <li>
+              <a
+                href="#localizacao"
+                className="text-lg hover:text-amber-200 transition-colors"
+              >
+                Localização
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contatos"
                 className="text-lg hover:text-amber-200 transition-colors"
               >
                 Contato
@@ -58,6 +76,26 @@ function Header() {
             <br />
             ideal para curtir em família ou com amigos.
           </p>
+        </div>
+        <div className="flex flex-row justify-center gap-4">
+          <Link
+            href="https://api.whatsapp.com/message/VA7F7STOQBEMN1?autoload=1&app_absent=0"
+            target="_blank"
+          >
+            <FaWhatsapp className="w-6 h-6 mx-auto" />
+          </Link>
+          <Link
+            href="https://www.instagram.com/lagoinharefugiohouse/"
+            target="_blank"
+          >
+            <FaInstagram className="w-6 h-6 mx-auto" />
+          </Link>
+          <Link
+            href="https://www.airbnb.com.br/rooms/39986251?adults=1&children=0&infants=0&search_mode=regular_search&check_in=2024-10-19&check_out=2024-10-24&source_impression_id=p3_1729176421_P3uJKRZ1xLrCmsQu&previous_page_section_name=1000&federated_search_id=dabb767d-6f9d-44dd-a278-d215daf96447"
+            target="_blank"
+          >
+            <FaAirbnb className="w-6 h-6 mx-auto" />
+          </Link>
         </div>
       </div>
     </header>

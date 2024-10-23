@@ -1,18 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import { MapPin, BedDouble, Bath, Wifi, ForkKnife } from 'lucide-react'
+import { MapPin, BedDouble, Wifi, ForkKnife } from 'lucide-react'
 import React from 'react'
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from './ui/card'
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardFooter,
+} from '../ui/card'
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
-} from './ui/carousel'
-import { MdLocalLaundryService } from 'react-icons/md'
+} from '../ui/carousel'
 import { FaCar, FaDog } from 'react-icons/fa'
 import SeeMore from './SeeMore'
+import Icons from '../Icons'
 
 function HousesCard() {
   const [open, setOpen] = React.useState(false)
@@ -56,35 +62,18 @@ function HousesCard() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-row max-sm:flex max-md:flex md:flex-row md:flex-wrap max-sm:flex-wrap lg:space-x-6 md:space-x-0 max-sm:space-x-0 gap-2 space-x-6 mb-4">
-              <div className="flex items-center space-x-2">
-                <BedDouble className="w-5 h-5 " />
-                <span>2 Quartos</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Bath className="w-5 h-5 " />
-                <span>2 Banheiros</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Wifi className="w-5 h-5 " />
-                <span>Wi-Fi</span>
-              </div>
-              <div className="flex items-center max-sm:flex max-sm:space-x-2 space-x-2">
-                <ForkKnife className="w-5 h-5 " />
-                <span>Cozinha</span>
-              </div>
-              <div className="flex items-center max-sm:flex max-sm:space-x-2 space-x-2">
-                <MdLocalLaundryService className="w-5 h-5 " />
-                <span>Lavanderia</span>
-              </div>
-              <div className="flex items-center max-sm:flex max-sm:space-x-2 space-x-2">
-                <FaDog className="w-5 h-5 " />
-                <span>Permitido Animais</span>
-              </div>
-              <div className="flex items-center max-sm:flex max-sm:space-x-2 space-x-2">
-                <FaCar className="w-5 h-5 " />
-                <span>Estacionamento Incluido</span>
-              </div>
+            <div className="flex flex-row gap-x-4 gap-y-2 max-sm:flex max-md:flex md:flex-row md:flex-wrap max-sm:flex-wrap md:space-x-0 max-sm:space-x-0 mb-4">
+              <Icons icon={<BedDouble />} text="2 Quartos" />
+              <Icons icon={<Wifi />} text="Wi-Fi" />
+              <Icons icon={<ForkKnife />} text="Cozinha" />
+              <Icons
+                icon={<FaDog className="w-5 h-5" />}
+                text="Permitido Animais"
+              />
+              <Icons
+                icon={<FaCar className="w-5 h-5" />}
+                text="Estacionamento Incluido"
+              />
             </div>
           </CardContent>
           <CardFooter className="flex flex-col items-start gap-4">
@@ -95,9 +84,9 @@ function HousesCard() {
               sensação de acolhimento e aconchego. Venha e Sinta-se em casa.
             </p>
             <SeeMore
-              title="Refúgio House II"
+              title="Refúgio House I"
               headerDescription="Bem-vindo ao charmoso Refúgio II"
-              description=""
+              link="https://www.airbnb.com.br/rooms/39986251?source_impression_id=p3_1729691859_P3luUCVFVsb_lgcq&modal=PHOTO_TOUR_SCROLLABLE"
               open={open1}
               setOpen={setOpen1}
             />
@@ -136,35 +125,18 @@ function HousesCard() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-row max-sm:flex max-md:flex md:flex-row md:flex-wrap max-sm:flex-wrap lg:space-x-6 md:space-x-0 max-sm:space-x-0 gap-2 space-x-6 mb-4">
-              <div className="flex items-center space-x-2">
-                <BedDouble className="w-5 h-5 " />
-                <span>3 Suítes</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Bath className="w-5 h-5 " />
-                <span>4 Banheiros</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Wifi className="w-5 h-5 " />
-                <span>Wi-Fi</span>
-              </div>
-              <div className="flex items-center max-sm:flex max-sm:space-x-2 space-x-2">
-                <ForkKnife className="w-5 h-5 " />
-                <span>Cozinha</span>
-              </div>
-              <div className="flex items-center max-sm:flex max-sm:space-x-2 space-x-2">
-                <MdLocalLaundryService className="w-5 h-5 " />
-                <span>Lavanderia</span>
-              </div>
-              <div className="flex items-center max-sm:flex max-sm:space-x-2 space-x-2">
-                <FaDog className="w-5 h-5 " />
-                <span>Permitido Animais</span>
-              </div>
-              <div className="flex items-center max-sm:flex max-sm:space-x-2 space-x-2">
-                <FaCar className="w-5 h-5" />
-                <span>Estacionamento Incluido</span>
-              </div>
+            <div className="flex flex-row  max-sm:flex max-md:flex md:flex-row md:flex-wrap max-sm:flex-wrap md:space-x-0 max-sm:space-x-0 gap-x-4 gap-y-2 mb-4">
+              <Icons icon={<BedDouble />} text="3 Suítes" />
+              <Icons icon={<Wifi />} text="Wi-Fi" />
+              <Icons icon={<ForkKnife />} text="Cozinha" />
+              <Icons
+                icon={<FaDog className="w-5 h-5" />}
+                text="Permitido Animais"
+              />
+              <Icons
+                icon={<FaCar className="w-5 h-5" />}
+                text="Estacionamento Incluido"
+              />
             </div>
           </CardContent>
           <CardFooter className="flex flex-col items-start gap-4">
@@ -178,7 +150,7 @@ function HousesCard() {
             <SeeMore
               title="Refúgio House II"
               headerDescription="Bem-vindo ao charmoso Refúgio II"
-              description=""
+              link="https://www.airbnb.com.br/rooms/703705924793969794?adults=1&children=0&enable_m3_private_room=true&infants=0&pets=0&search_mode=regular_search&check_in=2024-11-29&check_out=2024-12-04&source_impression_id=p3_1729706278_P3ZOFAoG6NHDAf6H&previous_page_section_name=1000&federated_search_id=076cf3a2-083a-4ea8-9bc6-1282611d8c4f&modal=PHOTO_TOUR_SCROLLABLE"
               open={open}
               setOpen={setOpen}
             />

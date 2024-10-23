@@ -1,22 +1,30 @@
 'use client'
 import React from 'react'
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog'
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../ui/dialog'
 import { DialogDescription, DialogTrigger } from '@radix-ui/react-dialog'
 import { ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 
 type SeeMoreProps = {
   title?: string
   headerDescription?: string
   description?: string
   footer?: string
+  link?: string
   open: boolean
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-function SeeMore({ title, headerDescription, open, setOpen }: SeeMoreProps) {
+function SeeMore({
+  title,
+  headerDescription,
+  link,
+  open,
+  setOpen,
+}: SeeMoreProps) {
   return (
     <Dialog open={open} onOpenChange={setOpen} modal={true}>
-      <DialogTrigger className="flex flex-row items-center justify-center">
+      <DialogTrigger className="flex flex-row items-center justify-center underline">
         Mostrar Mais <ChevronRight className="ml-1 h-4 w-4" />
       </DialogTrigger>
       <DialogContent>
@@ -67,6 +75,13 @@ function SeeMore({ title, headerDescription, open, setOpen }: SeeMoreProps) {
           Venha viver a melhor férias da sua vida, unindo conforto e belas
           praia.
         </p>
+        <Link
+          href={link || ''}
+          target="_blank"
+          className="text-sm w-full underline"
+        >
+          <strong>Veja todas as fotos aqui!</strong>
+        </Link>
       </DialogContent>
     </Dialog>
   )
