@@ -1,11 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
 import { FaAirbnb, FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { Kalam } from 'next/font/google'
+
+const kalam = Kalam({ subsets: ['latin'], weight: ['400'] })
 
 function Contacts() {
   return (
     <section className="text-center mb-20" id="contatos">
-      <h2 className="text-4xl font-bold mb-6 font-serif">Contatos</h2>
+      <h2
+        className={`${kalam.className} text-4xl font-bold mb-6 font-serif text-[#BC9B5D]`}
+      >
+        Contatos
+      </h2>
       <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
         Fique a vontade para nos contatar por qualquer pergunta ou sugestão,
         você sempre será bem vindo em nosso refúgio.

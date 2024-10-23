@@ -1,21 +1,18 @@
 'use client'
+import { Kalam } from 'next/font/google'
 import Link from 'next/link'
 import React from 'react'
 import { FaWhatsapp, FaInstagram, FaAirbnb } from 'react-icons/fa'
 
+const kalam = Kalam({ subsets: ['latin'], weight: ['400'] })
+
 function Header() {
   return (
-    <header className="relative h-[60vh] flex items-center justify-center text-white">
-      <div
-        className="absolute inset-0 bg-cover bg-center z-0"
-        style={{
-          backgroundImage: "url('./IMG_HEADER.jpg')",
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+    <header className="relative h-[60vh] max-sm:h-[90vh] flex items-center  justify-center text-[#BC9B5D]">
+      <div className="absolute inset-0 bg-[#fcf8ed] opacity-50 z-10"></div>
       <div className="container mx-auto px-4 z-20">
         <nav className="absolute top-0 left-0 right-0 p-6">
-          <ul className="flex justify-center space-x-8">
+          <ul className="flex flex-wrap justify-center space-x-8">
             <li>
               <a
                 href="#"
@@ -67,14 +64,17 @@ function Header() {
           </ul>
         </nav>
         <div className="text-center">
-          <h1 className="text-5xl font-bold mb-4 font-serif">
-            Refúgio House Lagoinha
+          <h1 className={`${kalam.className} text-6xl font-bold mb-4 max-sm:mt-[15vh]  font-serif`}>
+            Lagoinha Refúgio house
           </h1>
+          <p className="text-xl mb-8 max-w-2xl mx-auto mt-6">
+            Sua casa de temporada em Florianópolis!
+          </p>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
+            São 2 casas diponiveis para estadia,
             <br />
-            Paz, sossego e aconchego em um pátio perfeito para crianças,
-            <br />
-            ideal para curtir em família ou com amigos.
+            você pode reservar as duas
+            ou escolher qual será a sua.
           </p>
         </div>
         <div className="flex flex-row justify-center gap-4">

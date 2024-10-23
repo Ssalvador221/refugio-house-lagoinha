@@ -1,10 +1,15 @@
 import Link from 'next/link'
 import CardComments from './Cards/CardComments'
+import { Kalam } from 'next/font/google'
+
+const kalam = Kalam({ subsets: ['latin'], weight: ['400'] })
 
 function Comments() {
   return (
-    <section className="mb-20 bg-amber-50 py-16 px-8 rounded-lg">
-      <h2 className="text-4xl font-bold mb-12 text-center font-serif ">
+    <section className="mb-20 bg-[#fcf8ed] py-16 px-8 rounded-lg">
+      <h2
+        className={`${kalam.className} text-4xl font-bold mb-12 text-center text-[#BC9B5D]`}
+      >
         Comentários
       </h2>
       <div className="grid md:grid-cols-2 gap-8">

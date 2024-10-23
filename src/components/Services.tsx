@@ -13,7 +13,9 @@ function Services() {
       id="servicos"
     >
       <div className="flex flex-col items-center w-full p-4 text-center">
-        <h1 className={`${kantumruy.className} text-[25px] `}>Serviços</h1>
+        <h1 className={`${kantumruy.className} text-[25px] text-[#BC9B5D]`}>
+          Serviços
+        </h1>
         <p className={`${kantumruy.className} text-[18px] text-[#5e5d5d] p-3`}>
           Tudo para você desfrutar do sossego e viver uma experiência
           <br />
