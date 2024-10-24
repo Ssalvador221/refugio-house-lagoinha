@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="bg-[#fffbeb] text-black py-12">
       <div className="container mx-auto px-4 text-center">
-        <h3 className="text-2xl font-serif mb-4">Refúgio House</h3>
+        <h3 className="text-2xl font-serif mb-4">Lagoinha Refúgio House</h3>
         <p className="mb-4">
           Paz, sossego e aconchego em um pátio perfeito para crianças, ideal
           para curtir em família ou com amigos.
