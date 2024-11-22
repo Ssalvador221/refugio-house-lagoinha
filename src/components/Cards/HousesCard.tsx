@@ -38,11 +38,14 @@ function HousesCard() {
         <Card className="overflow-hidden shadow-lg">
           <Carousel className="w-full">
             <CarouselContent>
-              {[0, 1, 2, 3, 4, 5, 6].map((_, index) => (
+              {[
+                0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
+                18,
+              ].map((_, index) => (
                 <CarouselItem key={index}>
-                  <div className="relative h-64">
+                  <div className="relative h-[600px]">
                     <img
-                      src={`./refugio-fotos1/IMG_${index}.jpg`}
+                      src={`./refugio-fotos1/IMG-${index}.jpg`}
                       alt={`Fotos da casa`}
                       className="w-full h-full object-cover"
                     />
@@ -103,9 +106,12 @@ function HousesCard() {
         <Card className="overflow-hidden shadow-lg ">
           <Carousel className="w-full">
             <CarouselContent>
-              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, index) => (
+              {[
+                0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
+                18, 19, 20, 21,
+              ].map((_, index) => (
                 <CarouselItem key={index}>
-                  <div className="relative h-64">
+                  <div className="relative h-[600px]">
                     <img
                       src={`./refugio-fotos2/IMG-${index}.jpg`}
                       alt={`house pictures`}
